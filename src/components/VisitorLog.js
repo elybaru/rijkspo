@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CommentContainer from "./CommentContainer";
 
 function VisitorLog() {
@@ -9,6 +9,12 @@ function VisitorLog() {
 
     const [formData, setFormData] = useState(defaultFormData)
     const [comments, setComments] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/comments')
+            .then(resp => resp.json())
+            .then(data => setComments(data))
+    }, [])
 
     function handleFormChange(e) {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -31,7 +37,7 @@ function VisitorLog() {
         })
             .then(resp => resp.json())
             .then(data => {
-                addComment(data)
+                setComments([...comments, data])
                 setFormData(defaultFormData)
             })
     }

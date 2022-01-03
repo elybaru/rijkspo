@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { CircleLoader } from "react-spinners";
 
 function Header() {
-    const [randomElement, setRandomElement] = useState({})
+    const [randomElement, setRandomElement] = useState([])
+    const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
         fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${process.env.REACT_APP_API_KEY}&search?q=painting&v=&s=&ondisplay=True&ii=0&p=1&ps=100`)
@@ -14,6 +16,7 @@ function Header() {
     function randomDisplayPicture(pictures) {
         const getRandomElement = pictures[Math.floor(Math.random() * pictures.length)]
         setRandomElement(getRandomElement)
+        setLoaded(true)
     }
     console.log(randomElement)
 
@@ -21,7 +24,9 @@ function Header() {
         <div>
             I'm the Header component
             <div>
-                {/* <img src={randomElement.webImage.url} alt={randomElement.longTitle} width="100%" /> */}
+                {loaded ? <img src={randomElement.webImage.url} alt={randomElement.longTitle} width="100%" /> : <CircleLoader />}
+
+                {/*  */}
             </div>
         </div>
     )

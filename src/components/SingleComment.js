@@ -1,6 +1,7 @@
 import React from "react";
 
-function Comment({ comment }) {
+function SingleComment({ comment }) {
+    console.log(comment);
     return (
         <div>
             <p>{comment.comment}</p>
@@ -11,4 +12,4 @@ function Comment({ comment }) {
     )
 }
 
-export default Comment; 
+export default SingleComment;

@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
-import Comment from "./Comment"
+import React from "react";
+import SingleComment from "./SingleComment"
 
 function CommentContainer({ comments, setComments }) {
-
-    useEffect(() => {
-        fetch('http://localhost:3000/comments')
-            .then(resp => resp.json())
-            .then(data => setComments(data))
-    }, [])
+    console.log(comments)
 
     return (
         <div>
             <h4>Visitor comments</h4>
             {comments.map(comment => {
-                <Comment comment={comment} />
+                return <SingleComment comment={comment} />
             })}
         </div>
     )
