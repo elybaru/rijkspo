@@ -3,7 +3,7 @@ import React from "react";
 function ArtworkCard() {
     return (
         <div>
-            I'm the ArtworkCard
+            I'm the ArtworkCard.
         </div>
     )
 }

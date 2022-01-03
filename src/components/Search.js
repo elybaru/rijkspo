@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import { Checkbox, FormControlLabel, TextField } from "@mui/material"
 
 function Search() {
     const [searchTerm, setSearchTerm] = useState("")
+    const [checked, setChecked] = useState(false)
 
-    function handleSearch(e) {
-        setSearchTerm(e.target.value)
+    console.log(checked)
+
+    function handleSearch(event) {
+        setSearchTerm(event.target.value)
     }
-    console.log(searchTerm)
+
+    function handleSubmit(event) {
+        event.preventDefault()
+    }
     return (
         <div>
             <h3>Find your Rijkspo</h3>
@@ -14,9 +21,17 @@ function Search() {
             <form>
                 <label>
                     Search:
-                  <input type="text" name="search" onChange={handleSearch} />
+                    <TextField id="outlined-basic" label="Search" variant="outlined" type="text" name="search" onChange={handleSearch} />
                 </label>
-                <input type="submit" value="Submit" />
+
+                <input type="submit" value="Submit" onSubmit={handleSubmit} />
+                <FormControlLabel
+                    control={
+                        <Checkbox checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+                    }
+                    label="In the Museum"
+                />
+
             </form>
         </div>
     )

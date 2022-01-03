@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div>
-      <h1>I'm the App component</h1>
+      <h1>Rijkspo</h1>
       <Header />
       <NavBar />
       <Switch>
