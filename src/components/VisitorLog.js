@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CommentContainer from "./CommentContainer";
 
 function VisitorLog() {
     const defaultFormData = {
@@ -7,6 +8,7 @@ function VisitorLog() {
     }
 
     const [formData, setFormData] = useState(defaultFormData)
+    const [comments, setComments] = useState([])
 
     function handleFormChange(e) {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -14,8 +16,24 @@ function VisitorLog() {
 
     console.log(formData)
 
+    function addComment(newComment) {
+        const updatedComments = [...comments, newComment]
+    }
+
     function handleSubmit(e) {
         e.preventDefault()
+        fetch('http://localhost:3000/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(resp => resp.json())
+            .then(data => {
+                addComment(data)
+                setFormData(defaultFormData)
+            })
     }
 
     return (
@@ -47,6 +65,9 @@ function VisitorLog() {
                 </div>
                 <input type='submit' />
             </form>
+            <div>
+                <CommentContainer comments={comments} setComments={setComments} />
+            </div>
         </div>
     )
 }
