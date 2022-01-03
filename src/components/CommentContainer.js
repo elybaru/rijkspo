@@ -11,6 +11,7 @@ function CommentContainer({ comments, setComments }) {
 
     return (
         <div>
+            <h4>Visitor comments</h4>
             {comments.map(comment => {
                 <Comment comment={comment} />
             })}

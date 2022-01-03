@@ -20,9 +20,11 @@ function App() {
 
   // console.log(process.env.REACT_APP_API_KEY)
 
-  // fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${process.env.REACT_APP_API_KEY}&search?p=1&ps=12&who=Rembrandt&st=Objects&ii=6`)
+  // fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${process.env.REACT_APP_API_KEY}&search?p=1&ps=12&who=Rembrandt&st=Objects&ii=6`,{
   //   .then(resp => resp.json())
   //   .then(data => console.log(data))
+  // })
+
 
   return (
     <div>

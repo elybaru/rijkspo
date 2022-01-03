@@ -1,4 +1,10 @@
 {
-    "favorites": [],
-    "comments": []
+  "favorites": [],
+  "comments": [
+    {
+      "name": "Rembrandt",
+      "comment": "My paintings are the best",
+      "id": 1
+    }
+  ]
 }
