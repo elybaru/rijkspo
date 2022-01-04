@@ -1,7 +1,6 @@
 import React from "react";
 
 function SingleComment({ comment }) {
-    console.log(comment);
     return (
         <div>
             <p>{comment.comment}</p>

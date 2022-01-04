@@ -29,8 +29,8 @@ function App() {
   return (
     <div>
       <h1>Rijkspo</h1>
-      <Header />
       <NavBar />
+      <Header />
       <Switch>
         <Route exact path="/visitorlog">
           <VisitorLog />
