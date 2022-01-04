@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './App.css';
 import Header from "./components/Header"
 import { Switch, Route } from "react-router-dom"
@@ -6,9 +6,11 @@ import VisitorLog from "./components/VisitorLog"
 import Favorites from "./components/Favorites"
 import Search from "./components/Search"
 import NavBar from "./components/NavBar"
+import ArtworksContainer from "./components/ArtworksContainer";
 
 
 function App() {
+  const [searchResults, setSearchResults] = useState({})
   // Change the page title to "Rijkspo" - not working
 
   // useEffect(() => {
@@ -39,7 +41,8 @@ function App() {
           <Favorites />
         </Route>
         <Route exact path="/search">
-          <Search />
+          <Search setSearchResults={setSearchResults} />
+          <ArtworksContainer searchResults={searchResults} />
         </Route>
         <Route exact path="/">
           <div>Home</div>

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Checkbox, FormControlLabel, TextField } from "@mui/material"
 import ArtworksContainer from "./ArtworksContainer"
 
-function Search() {
+function Search({ setSearchResults }) {
     const [searchTerm, setSearchTerm] = useState("")
     const [checked, setChecked] = useState(false)
-    const [searchResults, setSearchResults] = useState([])
 
 
 
@@ -15,11 +14,16 @@ function Search() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}search?${searchTerm}p=1&ps=50${checked ? "&ondisplay=True" : ""}&st=Objects&ii=0`)
+        fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}&q=${searchTerm}&p=1&ps=50${checked ? "&ondisplay=True" : ""}&st=Objects&ii=0`)
             .then(resp => resp.json())
-            .then(data => console.log(data))
+            .then(data => {
+                setSearchResults(data)
+                setSearchTerm("")
+            })
 
     }
+
+    //&st=Objects&ii=0
 
     // 
     return (
@@ -29,7 +33,7 @@ function Search() {
             <form onSubmit={handleSubmit}>
                 <label>
                     Search:
-                    <TextField id="outlined-basic" label="Search" variant="outlined" type="text" name="search" onChange={handleSearch} />
+                    <TextField id="outlined-basic" label="Search" variant="outlined" type="text" name="search" onChange={handleSearch} value={searchTerm} />
                 </label>
                 <input type="submit" value="Submit" />
                 <FormControlLabel
@@ -39,9 +43,6 @@ function Search() {
                     label="In the Museum"
                 />
             </form>
-            <div>
-                <ArtworksContainer searchTerm={searchTerm} />
-            </div>
         </div>
     )
 }

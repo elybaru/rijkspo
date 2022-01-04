@@ -1,13 +1,16 @@
 import React from "react";
-import ArtWorkCard from "./ArtworkCard"
+import ArtworkCard from "./ArtworkCard"
 
-function ArtworksContainer({ searchTerm }) {
+function ArtworksContainer({ searchResults }) {
+    console.log(searchResults.artObjects)
+
 
     return (
         <div>
-            I'm the ArtworksContainer
-            <h4>{searchTerm}</h4>
-            <ArtWorkCard />
+            <h4>{searchResults.artObjects ? ` Found: ${searchResults.artObjects.length} works ` : ""}</h4>
+            {searchResults.artObjects ? searchResults.artObjects.map(artWork => {
+                return <ArtworkCard key={artWork.id} artWork={artWork} />
+            }) : ""}
         </div>
     )
 

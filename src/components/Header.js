@@ -6,6 +6,8 @@ function Header() {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
+        const link = `https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}&search?q=painting&v=&s=&ondisplay=True&ii=0&p=1&ps=100`
+        console.log(link)
         fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}&search?q=painting&v=&s=&ondisplay=True&ii=0&p=1&ps=100`)
             .then(resp => resp.json())
             .then(data => randomDisplayPicture(data.artObjects))
