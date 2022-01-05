@@ -1,5 +1,14 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "id": "en-SK-A-1505",
+      "title": "A Windmill on a Polder Waterway, Known as ‘In the Month of July’, Paul Joseph Constantin Gabriël, c. 1889",
+      "image": "https://lh3.googleusercontent.com/nfJiRConmXf4QR1bK3-E456qIEp2bYtuemyy3P3t7PonntyGJ8iPzFNKJPhZFCSSmJmj2AHePE4V1xl3BOz2NT8mfbNg=s0",
+      "objectNumber": "SK-A-1505",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-1505",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-1505"
+    }
+  ],
   "comments": [
     {
       "name": "Rembrandt",

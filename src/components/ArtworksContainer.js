@@ -4,7 +4,6 @@ import ArtworkCard from "./ArtworkCard"
 function ArtworksContainer({ searchResults }) {
     console.log(searchResults.artObjects)
 
-
     return (
         <div>
             <h4>{searchResults.artObjects ? ` Found: ${searchResults.artObjects.length} works ` : ""}</h4>

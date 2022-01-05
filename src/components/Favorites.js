@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Favorites() {
+    const [faves, setFaves] = useState([])
+
+    useEffect(() => {
+
+
+    })
     return (
         <div>
             I'm the favorites component.
@@ -11,3 +17,9 @@ function Favorites() {
 export default Favorites;
 
 
+
+// show page 
+// useParams for routing to that 
+// push/ useHistory
+
+//

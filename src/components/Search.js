@@ -14,6 +14,7 @@ function Search({ setSearchResults }) {
 
     function handleSubmit(event) {
         event.preventDefault();
+        console.log(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}&q=${searchTerm}&p=1&ps=50${checked ? "&ondisplay=True" : ""}&st=Objects&ii=0`)
         fetch(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.REACT_APP_API_KEY}&q=${searchTerm}&p=1&ps=50${checked ? "&ondisplay=True" : ""}&st=Objects&ii=0`)
             .then(resp => resp.json())
             .then(data => {

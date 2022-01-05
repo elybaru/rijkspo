@@ -28,7 +28,7 @@ function Header() {
             <div>
                 {loaded ?
                     <div>
-                        <img src={randomElement.webImage.url} alt={randomElement.longTitle} width="100%" />
+                        <img src={randomElement.headerImage.url} alt={randomElement.longTitle} width="100%" />
                         <p>{randomElement.longTitle}</p>
                     </div>
                     : <CircleLoader />}

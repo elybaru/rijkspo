@@ -7,6 +7,7 @@ import Favorites from "./components/Favorites"
 import Search from "./components/Search"
 import NavBar from "./components/NavBar"
 import ArtworksContainer from "./components/ArtworksContainer";
+import ArtworkDetail from "./components/ArtworkDetail";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <h1>Rijkspo</h1>
       <NavBar />
       <Header />
+      <ArtworkDetail />
       <Switch>
         <Route exact path="/visitorlog">
           <VisitorLog />
