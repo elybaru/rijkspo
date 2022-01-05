@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
+import FavoriteArtworkItem from "./FavoriteArtworkItem"
 
 function Favorites() {
     const [faves, setFaves] = useState([])
 
     useEffect(() => {
+        fetch(`http://localhost:3000/favorites`)
+            .then(resp => resp.json())
+            .then(data => setFaves(data))
+    }, [])
+    console.log(faves)
 
-
-    })
     return (
         <div>
-            I'm the favorites component.
+            {faves.map(fave => {
+                return <FavoriteArtworkItem key={fave.id} fave={fave} />
+            })}
         </div>
     )
 }

@@ -16,12 +16,14 @@ function ArtworkCard({ artWork }) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
+                // id should just be a unique integer assigned by db
                 id: artWork.id,
                 title: artWork.longTitle,
                 image: artWork.webImage.url,
                 objectNumber: artWork.objectNumber,
                 linkSelf: artWork.links.self,
-                linkWeb: artWork.links.web
+                linkWeb: artWork.links.web,
+                maker: artWork.principalOrFirstMaker
             })
         })
             .then(resp => resp.json())
