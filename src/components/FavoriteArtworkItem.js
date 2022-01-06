@@ -4,6 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { NavLink } from "react-router-dom";
+import ArtworkDetail from "./ArtworkDetail"
 
 function FavoriteArtworkItem({ fave }) {
     return (
@@ -27,7 +29,7 @@ function FavoriteArtworkItem({ fave }) {
                 </CardActionArea>
                 <CardActions>
                     <Button size="small" color="primary">
-                        Details
+                        <NavLink to={`/artworks/${fave.id}`}>Details</NavLink>
                     </Button>
                     <Button size="small" color="primary">
                         Remove from favorites

@@ -17,7 +17,6 @@ function ArtworkCard({ artWork }) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 // id should just be a unique integer assigned by db
-                id: artWork.id,
                 title: artWork.longTitle,
                 image: artWork.webImage.url,
                 objectNumber: artWork.objectNumber,
