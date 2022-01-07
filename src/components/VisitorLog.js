@@ -42,6 +42,11 @@ function VisitorLog() {
             })
     }
 
+    function handleDeleteComment(deletedComment) {
+        const updatedComments = comments.filter((comment) => comment.id !== deletedComment.id);
+        setComments(updatedComments)
+    }
+
     return (
         <div>
             <h2>Visitor Log</h2>
@@ -72,7 +77,7 @@ function VisitorLog() {
                 <input type='submit' />
             </form>
             <div>
-                <CommentContainer comments={comments} setComments={setComments} />
+                <CommentContainer comments={comments} setComments={setComments} handleDeleteComment={handleDeleteComment} />
             </div>
         </div>
     )

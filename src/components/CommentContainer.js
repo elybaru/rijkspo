@@ -1,13 +1,13 @@
 import React from "react";
 import SingleComment from "./SingleComment"
 
-function CommentContainer({ comments, setComments }) {
+function CommentContainer({ handleDeleteComment, comments, setComments }) {
 
     return (
         <div>
             <h4>Visitor comments</h4>
             {comments.map(comment => {
-                return <SingleComment key={comment.id} comment={comment} />
+                return <SingleComment handleDeleteComment={handleDeleteComment} key={comment.id} comment={comment} />
             })}
         </div>
     )

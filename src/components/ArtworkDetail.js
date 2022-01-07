@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid';
 
 
 function ArtworkDetail() {
-    const [currentDetail, setCurrentDetail] = useState([])
+    const [currentDetail, setCurrentDetail] = useState({})
     const history = useHistory()
     // console.log(history);
 
@@ -18,8 +18,9 @@ function ArtworkDetail() {
     const id = params.id
     console.log(params)
 
-    // programmatic routing
-    // useParams
+
+
+    // use objectnumber as ID 
 
     useEffect(() => {
         fetch(`http://localhost:3000/favorites/${id}`)
@@ -40,24 +41,29 @@ function ArtworkDetail() {
     //         .then(data => setCurrentDetail(data))
     // }, [])
 
+    function displayError() {
+        return (
+            <div>Loading...</div>
+        )
+    }
 
-
-
-    return (
-        <div>
-            <Card sx={{ maxWidth: 345 }}>
+    function displayDetails() {
+        return (
+            <Card sx={{ maxWidth: 700 }}>
                 <CardMedia
                     component="img"
-                    alt={currentDetail.title}
-                    height="140"
-                    image={currentDetail.image}
+                    alt={currentDetail.artObject.title}
+
+                    image={currentDetail.artObject.webImage.url}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {currentDetail.title}
+                        {currentDetail.artObject.longTitle}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-
+                        <h5>{currentDetail.artObject.principalMaker}</h5>
+                        <h4>{currentDetail.artObject.physicalMedium}</h4>
+                        <div>{currentDetail.artObject.label.description}</div>
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -65,6 +71,12 @@ function ArtworkDetail() {
                     <Button size="small">Learn More</Button>
                 </CardActions>
             </Card>
+        )
+    }
+
+    return (
+        <div>
+            {currentDetail.artObject ? displayDetails() : displayError()}
         </div>
     )
 }

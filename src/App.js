@@ -31,16 +31,18 @@ function App() {
 
   return (
     <div>
-      <h1>Rijkspo</h1>
       <NavBar />
       <Header />
-      <ArtworkDetail />
       <Switch>
         <Route exact path="/visitorlog">
           <VisitorLog />
         </Route>
         <Route exact path="/favorites">
           <Favorites />
+        </Route>
+        <Route exact path="/artworks/:id">
+          {/* change to objectnumber instead of id */}
+          <ArtworkDetail />
         </Route>
         <Route exact path="/search">
           <Search setSearchResults={setSearchResults} />

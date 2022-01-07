@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CircleLoader } from "react-spinners";
+import { AppBar } from '@mui/material';
 
 function Header() {
     const [randomElement, setRandomElement] = useState([])
