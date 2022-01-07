@@ -7,29 +7,31 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import useFavorites from "../hooks/useFavorites";
 
 
-function ArtworkDetail() {
+function ArtworkDetail({ isFavorite }) {
     const [currentDetail, setCurrentDetail] = useState({})
     const history = useHistory()
     // console.log(history);
 
+    const [handleFavorite, deleteFavorite, favorite] = useFavorites(currentDetail.artObject)
+
+    const [favorited, setFavorited] = useState(isFavorite)
+
     const params = useParams()
-    const id = params.id
-    console.log(params)
-
-
+    const objectNumber = params.id
+    console.log("artworkdetail")
 
     // use objectnumber as ID 
 
     useEffect(() => {
-        fetch(`http://localhost:3000/favorites/${id}`)
-            .then(resp => resp.json())
-            .then(data => fetchDetails(data))
+        console.log("hello")
+        fetchDetails(objectNumber)
     }, [])
 
-    function fetchDetails(artwork) {
-        fetch(`https://www.rijksmuseum.nl/api/en/collection/${artwork.objectNumber}?key=${process.env.REACT_APP_API_KEY}`)
+    function fetchDetails(objectNumber) {
+        fetch(`https://www.rijksmuseum.nl/api/en/collection/${objectNumber}?key=${process.env.REACT_APP_API_KEY}`)
             .then(resp => resp.json())
             .then(data => setCurrentDetail(data))
     }
@@ -67,8 +69,14 @@ function ArtworkDetail() {
                     </Typography>
                 </CardContent>
                 <CardActions>
+                    {favorite !== null && favorited === true ? <Button onClick={(e) => {
+                        console.log(favorite)
+                        deleteFavorite(favorite.id).then(() => setFavorited(false))
+                    }} size="small">Remove from Favorites</Button> : <Button onClick={(e) => {
+                        handleFavorite(e).then(() => setFavorited(true))
+                    }} size="small">Add to Favorites</Button>}
                     <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+
                 </CardActions>
             </Card>
         )

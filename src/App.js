@@ -40,9 +40,12 @@ function App() {
         <Route exact path="/favorites">
           <Favorites />
         </Route>
-        <Route exact path="/artworks/:id">
+        <Route path="/favorites/:id">
           {/* change to objectnumber instead of id */}
-          <ArtworkDetail />
+          <ArtworkDetail isFavorite={true} />
+        </Route>
+        <Route path="/artworks/:id">
+          <ArtworkDetail isFavorite={false} />
         </Route>
         <Route exact path="/search">
           <Search setSearchResults={setSearchResults} />

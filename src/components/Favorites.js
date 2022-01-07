@@ -11,10 +11,15 @@ function Favorites() {
     }, [])
     console.log(faves)
 
+    function handleDeleteFav(deletedFaveId) {
+        const updatedFaves = faves.filter((fave) => fave.id !== deletedFaveId);
+        setFaves(updatedFaves)
+    }
+
     return (
         <div>
             {faves.map(fave => {
-                return <FavoriteArtworkItem key={fave.id} fave={fave} />
+                return <FavoriteArtworkItem handleDeleteFave={handleDeleteFav} key={fave.id} fave={fave} />
             })}
         </div>
     )
