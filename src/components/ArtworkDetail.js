@@ -10,14 +10,12 @@ import Grid from '@mui/material/Grid';
 import useFavorites from "../hooks/useFavorites";
 
 
-function ArtworkDetail({ isFavorite }) {
+function ArtworkDetail() {
     const [currentDetail, setCurrentDetail] = useState({})
     const history = useHistory()
     // console.log(history);
 
-    const [handleFavorite, deleteFavorite, favorite] = useFavorites(currentDetail.artObject)
-
-    const [favorited, setFavorited] = useState(isFavorite)
+    const [handleFavorite, deleteFavorite, favorite, setFavorite] = useFavorites(currentDetail.artObject)
 
     const params = useParams()
     const objectNumber = params.id
@@ -69,11 +67,11 @@ function ArtworkDetail({ isFavorite }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    {favorite !== null && favorited === true ? <Button onClick={(e) => {
+                    {favorite !== null ? <Button onClick={(e) => {
                         console.log(favorite)
-                        deleteFavorite(favorite.id).then(() => setFavorited(false))
+                        deleteFavorite(favorite.id).then(() => setFavorite(null))
                     }} size="small">Remove from Favorites</Button> : <Button onClick={(e) => {
-                        handleFavorite(e).then(() => setFavorited(true))
+                        handleFavorite(e).then(() => setFavorite(true))
                     }} size="small">Add to Favorites</Button>}
                     <Button size="small">Share</Button>
 

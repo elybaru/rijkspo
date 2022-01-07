@@ -1,15 +1,6 @@
 {
   "favorites": [
     {
-      "title": "The Sampling Officials of the Amsterdam Drapers’ Guild, Known as ‘The Syndics’, Rembrandt van Rijn, 1662",
-      "image": "https://lh3.googleusercontent.com/gShVRyvLLbwVB8jeIPghCXgr96wxTHaM4zqfmxIWRsUpMhMn38PwuUU13o1mXQzLMt5HFqX761u8Tgo4L_JG1XLATvw=s0",
-      "objectNumber": "SK-C-6",
-      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-C-6",
-      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-C-6",
-      "maker": "Rembrandt van Rijn",
-      "id": 5
-    },
-    {
       "title": "Dish with Christ and Doubting Thomas, anonymous, c. 1510 - c. 1520",
       "image": "https://lh3.ggpht.com/UrqagTebIlim0C0vTdwkX2b1L5mpEGA5iWKDOvNtUTXoCp9vOynqseT3C4ySeD4M7q66HjuMxG2-Iwjd95Vn3NZ8oi4=s0",
       "objectNumber": "BK-NM-7440",
@@ -51,15 +42,6 @@
       "id": 11
     },
     {
-      "title": "Roemer with a poem to Constantijn Huygens, anonymous, 1619",
-      "image": "https://lh3.googleusercontent.com/iHNTtwRZU6MW_7mG6mJKsLD2oHwLLEg7osTsXJv5LrVwa24N-9K4ScGMGNtRQoc9WrVERVLk6fxbZyvanofH05xXPA=s0",
-      "objectNumber": "BK-1983-15",
-      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/BK-1983-15",
-      "linkWeb": "http://www.rijksmuseum.nl/en/collection/BK-1983-15",
-      "maker": "anonymous",
-      "id": 12
-    },
-    {
       "title": " The Art Gallery of Jan Gildemeester Jansz, Adriaan de Lelie, 1794 - 1795",
       "image": "https://lh3.googleusercontent.com/vkoS9jmZLZWuWH1LNIG3eJUVI6W7XqOUKmFf_lcuB4m1nJydWPXZGggi3XGwmirNj1wLdiO7sH6x5fJ60XJnH2expg=s0",
       "objectNumber": "SK-A-4100",
@@ -67,6 +49,33 @@
       "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-4100",
       "maker": "Adriaan de Lelie",
       "id": 13
+    },
+    {
+      "title": "Mary Magdalene, Jan van Scorel, c. 1530",
+      "image": "https://lh3.googleusercontent.com/moxL3z7zz5j_5gQCgvRGcmLD-RDhVgZvA2NGREYgkLTkYUbGa4Ts-57UaQ4ilN38xWX6w_gb_eU6hkMZcC-wfMg5NQ=s0",
+      "objectNumber": "SK-A-372",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-372",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-372",
+      "maker": "Jan van Scorel",
+      "id": 15
+    },
+    {
+      "title": "A Woman with a Dog, Herman van der Mijn, 1719",
+      "image": "https://lh3.googleusercontent.com/Xd_Viziep0lFu5buOvOJbvhwt84M7vB1bvkxK3QVX19NwnVmn3oSbz5FBlIDQ7ktWZGRBPs2Hwf0BrFelZOxe7NG8A=s0",
+      "objectNumber": "SK-A-4826",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-4826",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-4826",
+      "maker": "Herman van der Mijn",
+      "id": 18
+    },
+    {
+      "title": "Portrait of an Unknown Woman, Jan Jansz Mostaert, c. 1525",
+      "image": "https://lh3.googleusercontent.com/zuxEPYk1sYRdcSwL36b7tItd_SEBskpGx0Nm9ys4vve64m1Pqmtvj4llh1vHEU0mK7UtM7D-RYdM0ZW6k-AoBKTWJQ=s0",
+      "objectNumber": "SK-A-3843",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-3843",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-3843",
+      "maker": "Jan Jansz Mostaert",
+      "id": 19
     }
   ],
   "comments": [

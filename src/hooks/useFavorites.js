@@ -42,7 +42,7 @@ function useFavorites(artWork) {
         })
 
     }
-    return [handleFavorite, deleteFavorite, favorite]
+    return [handleFavorite, deleteFavorite, favorite, setFavorite]
 }
 
 export default useFavorites;
