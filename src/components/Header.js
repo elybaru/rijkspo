@@ -23,22 +23,16 @@ function Header() {
     }
     console.log(randomElement)
 
-    const headerDivStyles = {
-
-    }
 
     return (
         <div className="header">
-
             <div>
                 {loaded ?
-                    <div style={headerDivStyles}>
+                    <div>
                         <img src={randomElement.headerImage.url} alt={randomElement.longTitle} width="100%" />
-                        <p>{randomElement.longTitle}</p>
+                        <p className="headerText">{randomElement.longTitle}</p>
                     </div>
                     : <CircleLoader />}
-
-                {/*  */}
             </div>
         </div>
     )

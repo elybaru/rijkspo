@@ -55,7 +55,6 @@ function App() {
           <div>Home</div>
         </Route>
       </Switch>
-
     </div>
   );
 }
