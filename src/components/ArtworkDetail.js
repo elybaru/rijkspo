@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -13,8 +13,6 @@ import useFavorites from "../hooks/useFavorites";
 function ArtworkDetail() {
     const [currentDetail, setCurrentDetail] = useState({})
     const [handleFavorite, deleteFavorite, favorite, setFavorite] = useFavorites(currentDetail.artObject)
-    const history = useHistory()
-    // console.log(history);
 
     const params = useParams()
     const objectNumber = params.id

@@ -8,7 +8,6 @@ import Search from "./components/Search"
 import NavBar from "./components/NavBar"
 import ArtworksContainer from "./components/ArtworksContainer";
 import ArtworkDetail from "./components/ArtworkDetail";
-import Counter from "./components/Counter";
 
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
 
   return (
     <div>
-      <Counter />
       <NavBar />
       <Header />
       <Switch>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { CircleLoader } from "react-spinners";
-import { AppBar } from '@mui/material';
 
 function Header() {
     const [randomElement, setRandomElement] = useState([])
@@ -23,12 +22,16 @@ function Header() {
     }
     console.log(randomElement)
 
+    const headerDivStyles = {
+
+    }
+
     return (
         <div>
             I'm the Header component
             <div>
                 {loaded ?
-                    <div>
+                    <div style={headerDivStyles}>
                         <img src={randomElement.headerImage.url} alt={randomElement.longTitle} width="100%" />
                         <p>{randomElement.longTitle}</p>
                     </div>
