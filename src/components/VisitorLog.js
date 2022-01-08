@@ -48,7 +48,7 @@ function VisitorLog() {
     }
 
     return (
-        <div>
+        <div className="container">
             <h2>Visitor Log</h2>
             <h4>Thank you for visiting, I hope that you've found some inspiration from the Rijksmuseum. Please leave a comment below</h4>
             <form onSubmit={handleSubmit}>

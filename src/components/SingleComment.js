@@ -15,7 +15,6 @@ function SingleComment({ handleDeleteComment, comment }) {
         <div>
             <p>{comment.comment}</p>
             <p>{comment.name}</p>
-            <button>Update Comment</button>
             <button onClick={handleDeleteClick}>Delete Comment</button>
         </div>
     )

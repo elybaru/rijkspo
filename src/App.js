@@ -8,6 +8,7 @@ import Search from "./components/Search"
 import NavBar from "./components/NavBar"
 import ArtworksContainer from "./components/ArtworksContainer";
 import ArtworkDetail from "./components/ArtworkDetail";
+import "./styles.css";
 
 
 function App() {
@@ -33,28 +34,30 @@ function App() {
     <div>
       <NavBar />
       <Header />
-      <Switch>
-        <Route exact path="/visitorlog">
-          <VisitorLog />
-        </Route>
-        <Route exact path="/favorites">
-          <Favorites />
-        </Route>
-        <Route path="/favorites/:id">
-          {/* change to objectnumber instead of id */}
-          <ArtworkDetail />
-        </Route>
-        <Route path="/artworks/:id">
-          <ArtworkDetail />
-        </Route>
-        <Route exact path="/search">
-          <Search setSearchResults={setSearchResults} />
-          <ArtworksContainer searchResults={searchResults} />
-        </Route>
-        <Route exact path="/">
-          <div>Home</div>
-        </Route>
-      </Switch>
+      <div className="content">
+        <Switch>
+          <Route exact path="/visitorlog">
+            <VisitorLog />
+          </Route>
+          <Route exact path="/favorites">
+            <Favorites />
+          </Route>
+          <Route path="/favorites/:id">
+            {/* change to objectnumber instead of id */}
+            <ArtworkDetail />
+          </Route>
+          <Route path="/artworks/:id">
+            <ArtworkDetail />
+          </Route>
+          <Route exact path="/search">
+            <Search setSearchResults={setSearchResults} />
+            <ArtworksContainer searchResults={searchResults} />
+          </Route>
+          <Route exact path="/">
+            <div>Home</div>
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }

@@ -44,18 +44,25 @@ function ArtworkDetail() {
 
     function displayRemoveFromFavorites() {
         return (
-            <Button onClick={(e) => {
+            <button onClick={(e) => {
                 console.log(favorite)
                 deleteFavorite(favorite.id).then(() => setFavorite(null))
-            }} size="small">Remove from Favorites</Button>
+            }} size="small">Remove from Favorites</button>
+            // <Button onClick={(e) => {
+            //     console.log(favorite)
+            //     deleteFavorite(favorite.id).then(() => setFavorite(null))
+            // }} size="small">Remove from Favorites</Button>
         )
     }
 
     function displayAddFromFavorites() {
         return (
-            <Button onClick={(e) => {
+            <button onClick={(e) => {
                 handleFavorite(e).then(() => setFavorite(true))
-            }} size="small">Add to Favorites</Button>
+            }} size="small">Add to Favorites</button>
+            // <Button onClick={(e) => {
+            //     handleFavorite(e).then(() => setFavorite(true))
+            // }} size="small">Add to Favorites</Button>
         )
     }
 

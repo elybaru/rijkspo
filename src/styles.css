@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -59,7 +87,36 @@ body, p {
     color: white;
     font-size: 14px;
     position: relative;
-    margin: 0 1em;
+    margin: 0 1.5em;
     padding: 0;
     top: -30px;
+}
+
+.content {
+    margin: 0;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.container {
+   margin: 0 auto;
+   text-align: left;
+   position: relative;
+   top: -100px;
+}
+
+button {
+    background-color: #d55140;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 1.5em;
+    padding: 8px 8px;
+    margin: 0 8px;
+}
+
+button:hover {
+    background-color: rgb(51, 23, 23);
+    color: #d55140;
 }

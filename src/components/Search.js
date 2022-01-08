@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Checkbox, FormControlLabel, TextField } from "@mui/material"
 import ArtworksContainer from "./ArtworksContainer"
+import "../styles.css"
 
 function Search({ setSearchResults }) {
     const [searchTerm, setSearchTerm] = useState("")
@@ -28,7 +29,7 @@ function Search({ setSearchResults }) {
 
     // 
     return (
-        <div>
+        <div className="container">
             <h3>Find your Rijkspo</h3>
             <p>Dig through our storied archives and find works from great masters and modern artists all within our museum’s collection.</p>
             <form onSubmit={handleSubmit}>
