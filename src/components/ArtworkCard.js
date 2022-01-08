@@ -1,13 +1,7 @@
 import React from "react";
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import { NavLink } from "react-router-dom";
 import useFavorites from "../hooks/useFavorites";
+import "../styles.css"
 
 
 function ArtworkCard({ artWork }) {
@@ -36,38 +30,15 @@ function ArtworkCard({ artWork }) {
 
     // console.log(artWork.webImage ? "Exists" : "error")
     return (
-        <Grid
-            container spacing={4}
-            direction="row"
-            justifyContent="center"
-            alignItems="flex-start"
-        >
-            <Grid item container spacing={1} xs={12}>
-                <Card sx={{ maxWidth: 700 }}>
-                    <CardMedia
-                        component="img"
-                        height="500"
-                        image={artWork.webImage ? artWork.webImage.url : "https://lh3.googleusercontent.com/SsEIJWka3_cYRXXSE8VD3XNOgtOxoZhqW1uB6UFj78eg8gq3G4jAqL4Z_5KwA12aD7Leqp27F653aBkYkRBkEQyeKxfaZPyDx0O8CzWg=s0"}
-                        alt={artWork.longTitle}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h4" component="div">
-                            {artWork.longTitle}
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button onClick={handleFavorite}>Save to collection</Button>
-                        <Button>
-                            <NavLink to={`/artworks/${artWork.objectNumber}`}>Details</NavLink>
-                        </Button>
-                    </CardActions>
+        <div>
+            <div className="artCard">
+                <img src={artWork.webImage ? artWork.webImage.url : "https://lh3.googleusercontent.com/SsEIJWka3_cYRXXSE8VD3XNOgtOxoZhqW1uB6UFj78eg8gq3G4jAqL4Z_5KwA12aD7Leqp27F653aBkYkRBkEQyeKxfaZPyDx0O8CzWg=s0"} alt={artWork.longTitle} />
+                <p className="title">{artWork.longTitle}</p>
+                <button onClick={handleFavorite}>Save to favorites</button>
+                <NavLink to={`/artworks/${artWork.objectNumber}`}>Details</NavLink>
 
-                </Card>
-            </Grid>
-        </Grid>
-
-
-
+            </div>
+        </div>
         // <div>
         //     <img src={artWork.webImage.url} alt={artWork.longTitle} width="50%" />
         //     <h4>{artWork.longTitle}</h4>

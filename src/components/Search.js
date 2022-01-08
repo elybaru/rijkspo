@@ -25,9 +25,6 @@ function Search({ setSearchResults }) {
 
     }
 
-    //&st=Objects&ii=0
-
-    // 
     return (
         <div className="container">
             <h3>Find your Rijkspo</h3>
@@ -35,7 +32,7 @@ function Search({ setSearchResults }) {
             <form onSubmit={handleSubmit}>
                 <label>
                     Search:
-                    <TextField id="outlined-basic" label="Search" variant="outlined" type="text" name="search" onChange={handleSearch} value={searchTerm} />
+                    <input type="text" type="text" name="search" onChange={handleSearch} value={searchTerm} />
                 </label>
                 <input type="submit" value="Submit" />
                 <FormControlLabel
@@ -52,6 +49,8 @@ function Search({ setSearchResults }) {
 export default Search;
 
 
-        // search 
-        // search results
+// search 
+// search results
 // favorites
+
+{/* <TextField id="outlined-basic" label="Search" variant="outlined" type="text" name="search" onChange={handleSearch} value={searchTerm} /> */ }
