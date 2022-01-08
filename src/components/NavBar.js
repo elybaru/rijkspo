@@ -1,26 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-const navBarStyles = {
-
-}
-
-const logoStyles = {
-
-}
-
-const menuStyles = {
-
-}
+import "../styles.css"
 
 function NavBar() {
     return (
-        <div>
-            <h1>Rijkspo</h1>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/search">Search</NavLink>
-            <NavLink to="/favorites">Favorites</NavLink>
-            <NavLink to="/visitorlog">Visitor Log</NavLink>
+        <div className="navBar">
+            <div className="flexItems">
+            </div>
+            <div className="flexItems">
+                <h1 className="logo">Rijkspo</h1>
+            </div>
+            <div className="flexItems">
+                <NavLink to="/" className="menusItems">Home</NavLink>
+                <NavLink to="/search" className="menusItems">Search</NavLink>
+                <NavLink to="/favorites" className="menusItems">Favorites</NavLink>
+                <NavLink to="/visitorlog" className="menusItems">Visitor Log</NavLink>
+            </div>
         </div>
     )
 }
