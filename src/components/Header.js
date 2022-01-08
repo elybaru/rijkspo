@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CircleLoader } from "react-spinners";
+import '../styles.css';
 
 function Header() {
     const [randomElement, setRandomElement] = useState([])
@@ -27,8 +28,8 @@ function Header() {
     }
 
     return (
-        <div>
-            I'm the Header component
+        <div className="header">
+
             <div>
                 {loaded ?
                     <div style={headerDivStyles}>

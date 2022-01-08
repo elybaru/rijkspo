@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
 .navBar {
     position: relative;
@@ -6,13 +6,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid red;
+    height: 70px;
+    padding: 15px 0;
 }
 
 .navFlexItems {
-    border: 1px solid red;
-    
-
+    text-align: center;
+    width: 33%;
 }
 
 .logo {
@@ -22,12 +22,14 @@
     width: 175px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
 }
 
 .menuItems {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 1em;
 }
 
 .menuItems:hover {
@@ -35,6 +37,9 @@
 }
 
 .header {
-
+    position: relative;
+    top: -100px;
+    padding: 0;
+    margin: 0;
 }
 

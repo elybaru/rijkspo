@@ -5,16 +5,16 @@ import "../styles.css"
 function NavBar() {
     return (
         <div className="navBar">
-            <div className="flexItems">
+            <div className="navFlexItems">
             </div>
-            <div className="flexItems">
+            <div className="navFlexItems">
                 <h1 className="logo">Rijkspo</h1>
             </div>
-            <div className="flexItems">
-                <NavLink to="/" className="menusItems">Home</NavLink>
-                <NavLink to="/search" className="menusItems">Search</NavLink>
-                <NavLink to="/favorites" className="menusItems">Favorites</NavLink>
-                <NavLink to="/visitorlog" className="menusItems">Visitor Log</NavLink>
+            <div className="navFlexItems">
+                <NavLink to="/" className="menuItems">Home</NavLink>
+                <NavLink to="/search" className="menuItems">Search</NavLink>
+                <NavLink to="/favorites" className="menuItems">Favorites</NavLink>
+                <NavLink to="/visitorlog" className="menuItems">Visitor Log</NavLink>
             </div>
         </div>
     )
