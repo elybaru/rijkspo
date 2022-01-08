@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CommentContainer from "./CommentContainer";
+import '../styles.css'
 
 function VisitorLog() {
     const defaultFormData = {
@@ -49,26 +50,30 @@ function VisitorLog() {
 
     return (
         <div className="container">
-            <h2>Visitor Log</h2>
-            <h4>Thank you for visiting, I hope that you've found some inspiration from the Rijksmuseum. Please leave a comment below</h4>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <div className="visitorLogWelcome">
+                <h2>Visitor Log</h2>
+                <p>Thank you for visiting, I hope that you've found some inspiration from the Rijksmuseum. Please leave a comment below.</p>
+            </div>
+            <form onSubmit={handleSubmit} className="visitorForm">
+                <div className="visitorInput">
                     <label>
                         Your name:
                         <input
                             type='text'
                             name='name'
+
                             value={formData.name}
                             onChange={handleFormChange}
                         />
                     </label>
                 </div>
-                <div>
+                <div className="visitorInput">
                     <label>
                         Comment:
                         <input
                             type='text'
                             name='comment'
+
                             value={formData.comment}
                             onChange={handleFormChange}
                         />

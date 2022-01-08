@@ -190,3 +190,15 @@ input[type=submit]:hover{
     font-weight: 300;
     font-size: 14px;
 }
+
+.visitorLogWelcome {
+    margin: 24px 0px 16px 0px;
+}
+
+.visitorInput {
+    display: inline-block;
+}
+
+.visitorForm {
+    margin: 10px 0px 50px 0px;
+}
