@@ -10,15 +10,6 @@
       "id": 15
     },
     {
-      "title": "A Woman with a Dog, Herman van der Mijn, 1719",
-      "image": "https://lh3.googleusercontent.com/Xd_Viziep0lFu5buOvOJbvhwt84M7vB1bvkxK3QVX19NwnVmn3oSbz5FBlIDQ7ktWZGRBPs2Hwf0BrFelZOxe7NG8A=s0",
-      "objectNumber": "SK-A-4826",
-      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-4826",
-      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-4826",
-      "maker": "Herman van der Mijn",
-      "id": 18
-    },
-    {
       "title": "Portrait of an Unknown Woman, Jan Jansz Mostaert, c. 1525",
       "image": "https://lh3.googleusercontent.com/zuxEPYk1sYRdcSwL36b7tItd_SEBskpGx0Nm9ys4vve64m1Pqmtvj4llh1vHEU0mK7UtM7D-RYdM0ZW6k-AoBKTWJQ=s0",
       "objectNumber": "SK-A-3843",
@@ -28,13 +19,31 @@
       "id": 19
     },
     {
-      "title": "Twee toiletkoffers, André-Charles Boulle (attributed to), c. 1685 - c. 1690",
-      "image": "https://lh6.ggpht.com/9J2P7y9y4eZ3T9Qwg9-qM2RZpOs2d9KB3KerFFEx9wc9Wsqb6OygA8xT3iYqGscas8hhdS8UizZzTyxP24kW5HOmcE2N=s0",
-      "objectNumber": "BK-2009-255-1",
-      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/BK-2009-255-1",
-      "linkWeb": "http://www.rijksmuseum.nl/en/collection/BK-2009-255-1",
-      "maker": "André-Charles Boulle",
+      "title": "Portrait of a Woman, Possibly Maria Trip, Rembrandt van Rijn, 1639",
+      "image": "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0",
+      "objectNumber": "SK-C-597",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-C-597",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-C-597",
+      "maker": "Rembrandt van Rijn",
       "id": 20
+    },
+    {
+      "title": "Oopjen Coppit, Rembrandt van Rijn, 1634",
+      "image": "https://lh3.googleusercontent.com/ib8SNTK2Qk-z64UYuu-_mI3FswMpYmmNU871wu5diDEPyjxmYJcNI4qRtqxlvKkVnrXTAxAFkuHX7DAN9ZwPFzS5fGE=s0",
+      "objectNumber": "SK-C-1768",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-C-1768",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-C-1768",
+      "maker": "Rembrandt van Rijn",
+      "id": 21
+    },
+    {
+      "title": "Girl in a Large Hat, Caesar Boëtius van Everdingen, c. 1645 - c. 1650",
+      "image": "https://lh3.googleusercontent.com/7SCpHk2od2XtCFtdEi9fUT91F7CwawoLPWH5Jlrkksv79_JST7-dBpvuBWqjr65LQc8z_8O2lxQvQJFlfE763Da6REE=s0",
+      "objectNumber": "SK-A-5005",
+      "linkSelf": "http://www.rijksmuseum.nl/api/en/collection/SK-A-5005",
+      "linkWeb": "http://www.rijksmuseum.nl/en/collection/SK-A-5005",
+      "maker": "Caesar Boëtius van Everdingen",
+      "id": 22
     }
   ],
   "comments": [

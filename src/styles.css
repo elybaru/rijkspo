@@ -105,18 +105,48 @@ body, p {
    top: -100px;
 }
 
-button {
+button, .artCard a {
     background-color: #d55140;
     color: white;
     border-radius: 5px;
     border: none;
     outline: none;
-    height: 1.5em;
-    padding: 8px 8px;
-    margin: 0 8px;
+    height: 2.5em;
+    padding: 8px 16px;
+    margin: 16px 8px 8px 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-button:hover {
-    background-color: rgb(51, 23, 23);
-    color: #d55140;
+button:hover, .artCard a:hover {
+    background-color: lightgrey;
+    color: gray;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artCard title {
+
+}
+
+.artCard artist {
+    
+}
+
+.artCard {
+    padding: 0;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid lightgrey;
+    text-align: left;
+}
+
+.artCard img{
+    max-width: 100%;
 }

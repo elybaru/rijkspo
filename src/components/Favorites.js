@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FavoriteArtworkItem from "./FavoriteArtworkItem"
+import FavoriteArtworkItem from "./FavoriteArtworkItem";
+import '../styles.css';
 
 function Favorites() {
     const [faves, setFaves] = useState([])
@@ -17,7 +18,7 @@ function Favorites() {
     }
 
     return (
-        <div>
+        <div className="cardContainer">
             {faves.map(fave => {
                 return <FavoriteArtworkItem handleDeleteFave={handleDeleteFav} key={fave.id} fave={fave} />
             })}
