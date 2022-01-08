@@ -8,7 +8,8 @@ import Search from "./components/Search"
 import NavBar from "./components/NavBar"
 import ArtworksContainer from "./components/ArtworksContainer";
 import ArtworkDetail from "./components/ArtworkDetail";
-import Welcome from "./components/Welcome"
+import Welcome from "./components/Welcome";
+import Footer from "./components/Footer";
 import "./styles.css";
 
 
@@ -50,6 +51,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }
