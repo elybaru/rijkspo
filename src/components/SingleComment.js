@@ -12,9 +12,9 @@ function SingleComment({ handleDeleteComment, comment }) {
 
 
     return (
-        <div>
-            <p>{comment.comment}</p>
-            <p>{comment.name}</p>
+        <div className="singleComment">
+            <p className="commentField">{comment.comment}</p>
+            <p className="commentName">{comment.name}</p>
             <button onClick={handleDeleteClick}>Delete Comment</button>
         </div>
     )

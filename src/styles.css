@@ -30,11 +30,13 @@ html {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
+    color: #222;
 }
 
 body, p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    color: #222;
 }
 
 .navBar {
@@ -103,6 +105,7 @@ body, p {
    text-align: left;
    position: relative;
    top: -100px;
+   padding: 0 1.5em;
 }
 
 button, .artCard a {
@@ -127,26 +130,63 @@ button:hover, .artCard a:hover {
 
 .cardContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     flex-wrap: wrap;
 }
 
-.artCard title {
-
+.artCard .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
 }
 
-.artCard artist {
-    
+.artCard .artist {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
 }
 
 .artCard {
     padding: 0;
     margin: 10px;
     width: 300px;
-    border: 1px solid lightgrey;
     text-align: left;
 }
 
 .artCard img{
     max-width: 100%;
+}
+
+.favoritesHeader {
+    text-align: center;
+}
+
+input[type=submit] {
+    padding:5px 15px;  
+    border:0 none;
+    cursor:pointer;
+    background: black;
+    color: white;
+    font-family: "Poppings", sans-serif
+}
+
+input[type=submit]:hover{
+    background-color: lightgrey;
+    color: gray;
+}
+
+.singleComment {
+    width: 300px;
+    margin: 24px 0px 16px 0px;
+    border-bottom: 1px solid lightgray;
+}
+
+.commentField {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.commentName {
+    font-weight: 300;
+    font-size: 14px;
 }

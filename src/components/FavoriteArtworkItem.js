@@ -12,8 +12,8 @@ function FavoriteArtworkItem({ fave, handleDeleteFave }) {
         <div>
             <div className="artCard">
                 <img src={fave.image} alt={fave.title} />
-                <h3>{fave.title}</h3>
-                <p>Artist: {fave.maker}</p>
+                <p className="title">{fave.title}</p>
+                <p className="artist">{fave.maker}</p>
                 <NavLink to={`/favorites/${fave.objectNumber}`}>Details</NavLink>
                 <button onClick={() => deleteFavorite(fave.id).then(() => handleDeleteFave(fave.id))} size="small" color="primary">Remove from favorites</button>
             </div >

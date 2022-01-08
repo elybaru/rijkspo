@@ -18,10 +18,13 @@ function Favorites() {
     }
 
     return (
-        <div className="cardContainer">
-            {faves.map(fave => {
-                return <FavoriteArtworkItem handleDeleteFave={handleDeleteFav} key={fave.id} fave={fave} />
-            })}
+        <div className="container">
+            <h2 className="favoritesHeader">Favorites</h2>
+            <div className="cardContainer">
+                {faves.map(fave => {
+                    return <FavoriteArtworkItem handleDeleteFave={handleDeleteFav} key={fave.id} fave={fave} />
+                })}
+            </div>
         </div>
     )
 }
