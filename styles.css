@@ -1,0 +1,25 @@
+.navBar {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navFlexItems {
+    border: 1px solid red;
+
+}
+
+.logo {
+
+}
+
+.menuItems {
+
+}
+
+.header {
+
+}
+

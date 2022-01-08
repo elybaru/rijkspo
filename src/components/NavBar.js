@@ -1,6 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+const navBarStyles = {
+
+}
+
+const logoStyles = {
+
+}
+
+const menuStyles = {
+
+}
 
 function NavBar() {
     return (
