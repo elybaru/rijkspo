@@ -47,6 +47,23 @@ function ArtworkDetail() {
         )
     }
 
+    function displayRemoveFromFavorites() {
+        return (
+            <Button onClick={(e) => {
+                console.log(favorite)
+                deleteFavorite(favorite.id).then(() => setFavorite(null))
+            }} size="small">Remove from Favorites</Button>
+        )
+    }
+
+    function displayAddFromFavorites() {
+        return (
+            <Button onClick={(e) => {
+                handleFavorite(e).then(() => setFavorite(true))
+            }} size="small">Add to Favorites</Button>
+        )
+    }
+
     function displayDetails() {
         return (
             <Card sx={{ maxWidth: 700 }}>
@@ -67,14 +84,7 @@ function ArtworkDetail() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    {favorite !== null ? <Button onClick={(e) => {
-                        console.log(favorite)
-                        deleteFavorite(favorite.id).then(() => setFavorite(null))
-                    }} size="small">Remove from Favorites</Button> : <Button onClick={(e) => {
-                        handleFavorite(e).then(() => setFavorite(true))
-                    }} size="small">Add to Favorites</Button>}
-                    <Button size="small">Share</Button>
-
+                    {favorite !== null ? displayRemoveFromFavorites() : displayAddFromFavorites()}
                 </CardActions>
             </Card>
         )
@@ -88,3 +98,13 @@ function ArtworkDetail() {
 }
 
 export default ArtworkDetail;
+
+
+{/* <CardActions>
+{favorite !== null ? <Button onClick={(e) => {
+    console.log(favorite)
+    deleteFavorite(favorite.id).then(() => setFavorite(null))
+}} size="small">Remove from Favorites</Button> : <Button onClick={(e) => {
+    handleFavorite(e).then(() => setFavorite(true))
+}} size="small">Add to Favorites</Button>}
+</CardActions> */}
