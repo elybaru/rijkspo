@@ -26,11 +26,3 @@ function Favorites() {
 }
 
 export default Favorites;
-
-
-
-// show page 
-// useParams for routing to that 
-// push/ useHistory
-
-//

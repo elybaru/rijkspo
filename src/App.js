@@ -8,6 +8,7 @@ import Search from "./components/Search"
 import NavBar from "./components/NavBar"
 import ArtworksContainer from "./components/ArtworksContainer";
 import ArtworkDetail from "./components/ArtworkDetail";
+import Counter from "./components/Counter";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div>
+      <Counter />
       <NavBar />
       <Header />
       <Switch>
@@ -42,10 +44,10 @@ function App() {
         </Route>
         <Route path="/favorites/:id">
           {/* change to objectnumber instead of id */}
-          <ArtworkDetail isFavorite={true} />
+          <ArtworkDetail />
         </Route>
         <Route path="/artworks/:id">
-          <ArtworkDetail isFavorite={false} />
+          <ArtworkDetail />
         </Route>
         <Route exact path="/search">
           <Search setSearchResults={setSearchResults} />

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function useFavorites(artWork) {
-
     const [favorite, setFavorite] = useState(null)
 
     useEffect(() => {
