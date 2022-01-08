@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 
 function useFavorites(artWork) {
     const [favorite, setFavorite] = useState(null)
+    console.log("I'm the favorite state variable in the useFavorite hook" + favorite)
 
     useEffect(() => {
         if (artWork) {
-            console.log("We have an artwork")
+            // console.log("We have an artwork")
             fetch(`http://localhost:3000/favorites?objectNumber=${artWork.objectNumber}`)
                 .then(resp => resp.json())
                 .then(data => {

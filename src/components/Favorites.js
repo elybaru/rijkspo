@@ -9,7 +9,7 @@ function Favorites() {
             .then(resp => resp.json())
             .then(data => setFaves(data))
     }, [])
-    console.log(faves)
+    console.log("I'm all of the faves fetched from the favorites componenet " + faves)
 
     function handleDeleteFav(deletedFaveId) {
         const updatedFaves = faves.filter((fave) => fave.id !== deletedFaveId);

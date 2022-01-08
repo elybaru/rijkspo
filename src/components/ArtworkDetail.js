@@ -12,19 +12,16 @@ import useFavorites from "../hooks/useFavorites";
 
 function ArtworkDetail() {
     const [currentDetail, setCurrentDetail] = useState({})
+    const [handleFavorite, deleteFavorite, favorite, setFavorite] = useFavorites(currentDetail.artObject)
     const history = useHistory()
     // console.log(history);
-
-    const [handleFavorite, deleteFavorite, favorite, setFavorite] = useFavorites(currentDetail.artObject)
 
     const params = useParams()
     const objectNumber = params.id
     console.log("artworkdetail")
 
-    // use objectnumber as ID 
 
     useEffect(() => {
-        console.log("hello")
         fetchDetails(objectNumber)
     }, [])
 
