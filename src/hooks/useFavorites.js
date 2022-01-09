@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function useFavorites(artWork) {
     const [favorite, setFavorite] = useState(null)
-    console.log("I'm the favorite state variable in the useFavorite hook" + favorite)
+    // console.log("I'm the favorite state variable in the useFavorite hook" + favorite)
 
     useEffect(() => {
         if (artWork) {

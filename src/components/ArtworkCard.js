@@ -39,10 +39,7 @@ function ArtworkCard({ artWork }) {
 
             </div>
         </div>
-        // <div>
-        //     <img src={artWork.webImage.url} alt={artWork.longTitle} width="50%" />
-        //     <h4>{artWork.longTitle}</h4>
-        // </div>
+
     )
 }
 

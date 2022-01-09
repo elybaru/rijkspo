@@ -23,6 +23,10 @@ function App() {
   //   document.title = text;
   // }, [text]);
 
+  // useEffect(() => {
+  //   document.title = "Rijkspo";
+  // }, []);
+
   return (
     <div>
       <NavBar />

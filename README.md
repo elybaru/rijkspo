@@ -1,3 +1,8 @@
+# Rijkspo
+
+This app allows you to explore the data from the open API from the Rijksmuseum. A key is needed for the requests to their API, which is concelead in a local environment variable. A mock backend is run with a json server, and the post/delete requests are set to the localhost endpoint, so you'll need to run json-server --watch db.json in a terminal in order to save/remove favorites and comments.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
