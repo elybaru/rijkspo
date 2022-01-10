@@ -9,26 +9,6 @@ function ArtworkCard({ artWork }) {
 
     const [handleFavorite, deleteFavorite, favorite] = useFavorites(artWork)
 
-    // function handleFavorite(event) {
-    //     console.log(artWork)
-    //     fetch(`http://localhost:3000/favorites`, {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify({
-    //             // id should just be a unique integer assigned by db
-    //             title: artWork.longTitle,
-    //             image: artWork.webImage.url,
-    //             objectNumber: artWork.objectNumber,
-    //             linkSelf: artWork.links.self,
-    //             linkWeb: artWork.links.web,
-    //             maker: artWork.principalOrFirstMaker
-    //         })
-    //     })
-    //         .then(resp => resp.json())
-    //         .then(data => console.log(data))
-    // }
-
-    // console.log(artWork.webImage ? "Exists" : "error")
     return (
         <div>
             <div className="artCard">

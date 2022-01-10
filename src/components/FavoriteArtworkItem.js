@@ -22,32 +22,3 @@ function FavoriteArtworkItem({ fave, handleDeleteFave }) {
 }
 
 export default FavoriteArtworkItem
-
-
-{/* <Card sx={{ maxWidth: 345 }}>
-<CardActionArea>
-    <img src={fave.image} alt={fave.title} />
-    <CardMedia
-        component="img"
-        height="140"
-        image={fave.image}
-        alt={fave.title}
-    />
-    <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-            {fave.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-            Artist: {fave.maker}
-        </Typography>
-    </CardContent>
-</CardActionArea>
-<CardActions>
-    <Button size="small" color="primary">
-        <NavLink to={`/favorites/${fave.objectNumber}`}>Details</NavLink>
-    </Button>
-    <Button onClick={() => deleteFavorite(fave.id).then(() => handleDeleteFave(fave.id))} size="small" color="primary">
-        Remove from favorites
-    </Button>
-</CardActions>
-</Card> */}

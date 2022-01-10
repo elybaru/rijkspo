@@ -6,6 +6,7 @@ import '../styles.css';
 function ArtworksContainer({ searchResults }) {
     console.log(searchResults.artObjects)
 
+
     return (
         <div className="container">
             <div>

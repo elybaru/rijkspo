@@ -30,11 +30,7 @@ function ArtworkDetail() {
     }
     console.log(currentDetail)
 
-    // useEffect(() => {
-    //     fetch(`https://www.rijksmuseum.nl/api/en/collection/SK-C-5?key=${process.env.REACT_APP_API_KEY}`)
-    //         .then(resp => resp.json())
-    //         .then(data => setCurrentDetail(data))
-    // }, [])
+
 
     function displayError() {
         return (
@@ -48,10 +44,7 @@ function ArtworkDetail() {
                 console.log(favorite)
                 deleteFavorite(favorite.id).then(() => setFavorite(null))
             }} size="small">Remove from Favorites</button>
-            // <Button onClick={(e) => {
-            //     console.log(favorite)
-            //     deleteFavorite(favorite.id).then(() => setFavorite(null))
-            // }} size="small">Remove from Favorites</Button>
+
         )
     }
 
@@ -60,9 +53,6 @@ function ArtworkDetail() {
             <button onClick={(e) => {
                 handleFavorite(e).then(() => setFavorite(true))
             }} size="small">Add to Favorites</button>
-            // <Button onClick={(e) => {
-            //     handleFavorite(e).then(() => setFavorite(true))
-            // }} size="small">Add to Favorites</Button>
         )
     }
 
@@ -101,12 +91,3 @@ function ArtworkDetail() {
 
 export default ArtworkDetail;
 
-
-{/* <CardActions>
-{favorite !== null ? <Button onClick={(e) => {
-    console.log(favorite)
-    deleteFavorite(favorite.id).then(() => setFavorite(null))
-}} size="small">Remove from Favorites</Button> : <Button onClick={(e) => {
-    handleFavorite(e).then(() => setFavorite(true))
-}} size="small">Add to Favorites</Button>}
-</CardActions> */}
